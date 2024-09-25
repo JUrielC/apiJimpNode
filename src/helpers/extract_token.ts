@@ -8,7 +8,7 @@ export const extractAndVerifyToken = async (authorizationHeader: string) => {
     const extractedToken = authorizationHeader.split(' ')[1];
     const tokenData = await verifyToken(extractedToken);
 
-    if (!tokenData || tokenData === "Token expirado") {
+    if (!tokenData) {
         throw new Error(tokenData || 'Token inválido');
     }
 

@@ -12,7 +12,7 @@ export const tokenSign = async (user:number) =>{
         },
             secret,
         {
-            expiresIn: "30m"
+            expiresIn: "30s"
         }
     ) 
 }

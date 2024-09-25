@@ -4,10 +4,7 @@ import path from 'node:path'
 import { extractAndVerifyToken } from '../helpers/extract_token';
 import { Image } from "../entities/images";
 import { User } from "../entities/users";
-
-interface TokenPayload {
-    id_user: string;
-}
+import { TokenPayload } from "../types/interfaces";
 
 export const postImageRezise = async (req: Request, res: Response) => {
     try {
