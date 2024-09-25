@@ -1,4 +1,4 @@
-import { postImageRezise } from '../controllers/img_controller'
+import { postImageRezise, postImageRotate } from '../controllers/img_controller'
 import { Router } from 'express'
 import multer from 'multer'
 import { storage, fileFilter } from '../middlewares/multer_config'
@@ -17,6 +17,12 @@ routerImages.post('/resize', checkToken, upload.single('image'),
         body('height').optional().isNumeric(),
     ],
     postImageRezise)
+
+    routerImages.post('/rotate', checkToken, upload.single('image'),
+    [
+        body('rotate').isNumeric(),
+    ],
+    postImageRotate)
 
 
 routerImages.use(multerErrorHandler);
