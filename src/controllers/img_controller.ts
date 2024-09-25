@@ -5,6 +5,7 @@ import { extractAndVerifyToken } from '../helpers/extract_token';
 import { Image } from "../entities/images";
 import { User } from "../entities/users";
 import { TokenPayload } from "../types/interfaces";
+import { validationResult } from 'express-validator'; 
 
 export const postImageRezise = async (req: Request, res: Response) => {
     try {
@@ -20,7 +21,15 @@ export const postImageRezise = async (req: Request, res: Response) => {
 
         const image = req.file
         const { width, height }: { width?: string, height?: string } = req.body;
-        
+
+         //validacion expresss validator
+         const validation_error = validationResult(req);
+         if (!validation_error.isEmpty()) {
+             return res.status(400).json({
+                 message:"Datos incorrectos. Revisar la solicitud"
+             })
+         }
+         
         //2do Filtro 
         if (!image) {
             return res.status(400).json({
@@ -58,7 +67,7 @@ export const postImageRezise = async (req: Request, res: Response) => {
 
     } catch (error) {
         return res.status(500).json({
-            message: error instanceof Error ? "Error al procesar la imagen: " + error.message
+            message: error instanceof Error ? "Error al procesar la imagen: " 
                 : "Interal Server Error",
         });
     }
