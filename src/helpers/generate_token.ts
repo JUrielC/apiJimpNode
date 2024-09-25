@@ -20,12 +20,10 @@ export const tokenSign = async (user:number) =>{
 //verificar token
 export const verifyToken = async (token:string) => {
     try {
-        console.log(jwt.verify(token, secret))
         return jwt.verify(token, secret);
     } 
     catch (error) {
         if (error instanceof jwt.TokenExpiredError) {
-            //console.log("Token has expired");
             return "Token expirado";
         } else {
             return null;

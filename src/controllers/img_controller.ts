@@ -1,14 +1,32 @@
 import { Request, Response } from "express"
 import { Jimp } from "jimp";
 import path from 'node:path'
-//import { idUserByToken } from "../helpers/return_id_user";
+ import { extractAndVerifyToken } from '../helpers/extract_token';
+/*import { idUserByToken } from "../helpers/return_id_user"; */
 
+interface TokenPayload {
+    id_user: string; 
+}
 
 export const postImageRezise = async (req: Request, res: Response) => {
     try {
         const image = req.file
-       // const idUser = idUserByToken()
-        //2do Filtro
+        if(!req.headers.authorization){
+            return res.status(401).json({
+                message: "Token de sesión no encontrado"
+            });
+        }
+        const token_data  = await extractAndVerifyToken(req.headers.authorization) as TokenPayload
+        const idUser = token_data.id_user
+        console.log(idUser)
+       /*  if(!req.headers.authorization){
+            return res.status(401).json({
+                message: "Token de sesión no encontrado"
+            });
+        }
+        const token_data = await extractAndVerifyToken(req.headers.authorization) as string;
+        */ 
+        //2do Filtro 
         if (!image) {
             return res.status(400).json({
                 message: "No se ha cargado ninguna imagen válida. Verifique el formato del archivo: png, jpeg, gif o jfif"
