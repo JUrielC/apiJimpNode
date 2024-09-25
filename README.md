@@ -50,6 +50,7 @@ Pasos para configurar el proyecto en una máquina local:
 ## Uso
 
 1. **Configurar variables de entorno de acuerdo al archivo .env.example que está en la carpeta raíz**
+   Cambiar la extensión del archivo .env.example por .env  o crear un nuevo .env con la estructura de env.example en la misma ubicación (carpeta raíz)
 
 2. **Ruta para login:**
    Es necesario hacer un login para obtener un token que permita usar las demás funciones
