@@ -52,5 +52,47 @@ Pasos para configurar el proyecto en una máquina local:
 1. **Configurar variables de entorno de acuerdo al archivo .env.example que está en la carpeta raíz**
 
 2. **Ruta para login:**
+   Es necesario hacer un login para obtener un token que permita usar las demás funciones
+   Los usarios predeterminados son 
+   {
+    "userName": "user0",
+    "password": "pass0"
+   }
+   {
+    "userName": "user1",
+    "password": "pass1"
+   }
    ```bash
    http://localhost:PUERTO/login/
+
+3. **Rutas para uso de Jimp:**
+
+   Ruta:
+   http://localhost:PUERTO/image/fisheye
+
+   Body: 
+   -Imagen (usando form-data)
+
+   Ruta:
+   http://localhost:PUERTO/image/resize
+
+   Body:
+   -Imagen (usando form-data)
+   -Width: 
+      Key: width 
+      Value: NUMERO ENTERO (Opcional)
+   -Height: 
+      Key: height 
+      Value: NUMERO ENTERO (Opcional)
+
+   
+   Ruta:
+   http://localhost:PUERTO/image/rotate
+
+   Body:
+   -Imagen (usando form-data)
+   -Rotate: 
+      Key: rotate 
+      Value: NUMERO ENTERO
+   
+     

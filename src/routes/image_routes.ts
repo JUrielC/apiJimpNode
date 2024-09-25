@@ -13,14 +13,14 @@ const routerImages = Router()
 
 routerImages.post('/resize', checkToken, upload.single('image'),
     [
-        body('width').optional().isNumeric(),
-        body('height').optional().isNumeric(),
+        body('width').optional().isInt(),
+        body('height').optional().isInt(),
     ],
     postImageRezise)
 
 routerImages.post('/rotate', checkToken, upload.single('image'),
     [
-        body('rotate').isNumeric(),
+        body('rotate').isInt(),
     ],
     postImageRotate)
 
