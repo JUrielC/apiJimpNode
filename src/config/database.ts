@@ -1,7 +1,8 @@
 import {DataSource}  from 'typeorm'
 import { User } from '../entities/users'
 import { Image} from '../entities/images'
-require('dotenv').config({ path: './../apiJimpNode/.env' })
+import path from 'node:path'
+require('dotenv').config({ path: path.resolve( __dirname, '../../.env') })
 export const AppDataSource = new DataSource({
     type: 'mysql',
     host: process.env.HOST,
