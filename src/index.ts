@@ -3,6 +3,7 @@ import { AppDataSource } from "./config/database"
 import express from 'express'
 import routerImages from './routes/image_routes'
 import routerLogin from './routes/login_routes'
+import routerImagesServices from "./routes/img_services_routes"
 import cors from 'cors'
 require('dotenv').config({ path: '../apiJimpNode/.env' })
 
@@ -13,6 +14,7 @@ app.use(express.json())
 
 app.use('/image', routerImages)
 app.use('/login', routerLogin)
+app.use('/imgservices', routerImagesServices)
 
 
 async function main() {

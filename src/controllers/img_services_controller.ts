@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 import { extractAndVerifyToken } from '../helpers/extract_token';
 import { TokenPayload } from "../types/interfaces";
-//import { Image } from "../entities/images";
+import { Image } from "../entities/images";
 
 export const getImages = async (req: Request, res: Response) => {
     try {
@@ -14,10 +14,12 @@ export const getImages = async (req: Request, res: Response) => {
         }
         const token_data = await extractAndVerifyToken(req.headers.authorization) as TokenPayload
         const idUser = token_data.id_user
-        console.log(idUser)
 
-        //const image_database = new Image()
+        //Get a la base de datos de las imágenes editadas por el usuario actual
+        const images = await Image.findBy({ user: { id: parseInt(idUser) } });
 
+
+        return res.json(images)
 
 
     } catch (error) {
