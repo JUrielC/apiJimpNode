@@ -6,8 +6,8 @@ export class Image extends  BaseEntity{
     @PrimaryGeneratedColumn({ name: 'id_image' }) 
     id: number;
 
-    @Column({ name: 'nombre_image', type: 'varchar', length: 30 })
-    nombreImage: string;
+    @Column({ name: 'name_image', type: 'varchar', length: 30 })
+    nameImage: string;
 
     @Column({ name: 'url_image', type: 'varchar', length: 260 })
     urlImage: string;
