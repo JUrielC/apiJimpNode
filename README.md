@@ -9,8 +9,6 @@ La edición de imágenes se lleva a cabo con usuarios validados a través de un 
 - [Tecnologías](#tecnologías_principales)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Tecnologías_principales
 
@@ -28,14 +26,22 @@ La edición de imágenes se lleva a cabo con usuarios validados a través de un 
 
 Pasos para configurar el proyecto en una máquina local:
 
-1. **Clona el repositorio:**
+1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/JUrielC/apiJimpNode o download Zip
+   git clone https://github.com/JUrielC/apiJimpNode
+
+
+2. **Navegar a la carptea raíz:**
 
    cd nombre-del-proyecto
 
-   npm install
+3. **Instalar dependencias:**
 
+   npm install
+   
+4. **Compilar los archivos Typescript**
    npm run tsc
+
+5. **Ejecutar el archivo index desde la carpeta raíz:**
 
    node build/index.js
