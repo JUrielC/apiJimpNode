@@ -11,5 +11,4 @@ export const AppDataSource = new DataSource({
     database: process.env.DATABASE,
     entities: [User, Image],
     synchronize: false, 
-
 })
