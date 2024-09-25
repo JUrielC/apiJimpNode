@@ -26,11 +26,16 @@ La edición de imágenes se lleva a cabo con usuarios validados a través de un 
 
 ## Instalación
 
-Sigue estos pasos para configurar el proyecto en tu máquina local:
+Pasos para configurar el proyecto en una máquina local:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tuusuario/nombre-del-proyecto.git
+   git clone https://github.com/JUrielC/apiJimpNode o download Zip
 
    cd nombre-del-proyecto
 
+   npm install
+
+   npm run tsc
+
+   node build/index.js
