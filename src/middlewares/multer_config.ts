@@ -16,7 +16,7 @@ export const storage = multer.diskStorage({
             extension = ".jpg"
         } 
 
-        cb(null, file.fieldname + '_' + Date.now() + '_' + extension /* path.extname(file.originalname) */)
+        cb(null, file.fieldname + '_' + Date.now() + extension /* path.extname(file.originalname) */)
         
     }
 })

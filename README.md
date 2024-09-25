@@ -30,18 +30,27 @@ Pasos para configurar el proyecto en una máquina local:
    ```bash
    git clone https://github.com/JUrielC/apiJimpNode
 
-
 2. **Navegar a la carptea raíz:**
-
+   ```bash
    cd nombre-del-proyecto
 
 3. **Instalar dependencias:**
-
+   ```bash
    npm install
    
 4. **Compilar los archivos Typescript**
+   ```bash
    npm run tsc
 
 5. **Ejecutar el archivo index desde la carpeta raíz:**
-
+   ```bash
    node build/index.js
+
+
+## Uso
+
+1. **Configurar variables de entorno de acuerdo al archivo .env.example que está en la carpeta raíz**
+
+2. **Ruta para login:**
+   ```bash
+   http://localhost:PUERTO/login/
