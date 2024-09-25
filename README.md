@@ -67,32 +67,32 @@ Pasos para configurar el proyecto en una máquina local:
 
 3. **Rutas para uso de Jimp:**
 
-   Ruta:
+  - **Ruta**:
    http://localhost:PUERTO/image/fisheye
 
-   Body: 
+   *Body*: 
    -Imagen (usando form-data)
 
-   Ruta:
+   - **Ruta**:
    http://localhost:PUERTO/image/resize
 
-   Body:
-   -Imagen (usando form-data)
-   -Width: 
-      Key: width 
-      Value: NUMERO ENTERO (Opcional)
-   -Height: 
-      Key: height 
-      Value: NUMERO ENTERO (Opcional)
+      Body:
+      -Imagen (usando form-data)
+      -Width: 
+         Key: width 
+         Value: NUMERO ENTERO (Opcional)
+      -Height: 
+         Key: height 
+         Value: NUMERO ENTERO (Opcional)
 
    
-   Ruta:
+   - **Ruta**:
    http://localhost:PUERTO/image/rotate
 
-   Body:
-   -Imagen (usando form-data)
-   -Rotate: 
-      Key: rotate 
-      Value: NUMERO ENTERO
+      Body:
+      -Imagen (usando form-data)
+      -Rotate: 
+         Key: rotate 
+         Value: NUMERO ENTERO
    
      
