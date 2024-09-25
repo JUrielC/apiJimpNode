@@ -122,7 +122,7 @@ export const postImageRotate = async (req: Request, res: Response) => {
         imageDatabase.urlImage = path.resolve(__dirname, `../../${dir}`)
 
         if (!userDatabase) {
-            res.status(404).json({
+            res.status(404).json({ 
                 message: "Usuario no encontrado"
             })
         } else {

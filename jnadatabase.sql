@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `jnadatabase`.`images` (
   `id_image` INT NOT NULL AUTO_INCREMENT,
-  `nombre_image` VARCHAR(30) NOT NULL,
+  `name_image` VARCHAR(30) NOT NULL,
   `url_image` VARCHAR(260) NOT NULL,
   `users_id_user` INT NOT NULL,
   PRIMARY KEY (`id_image`),
