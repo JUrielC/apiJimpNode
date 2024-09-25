@@ -78,7 +78,7 @@ Pasos para configurar el proyecto en una máquina local:
 
       Body:  
       -Imagen (usando form-data)  
-      -Width: 
+      -Width:  
          Key: width  
          Value: NUMERO ENTERO (Opcional)  
       -Height:  
