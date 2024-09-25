@@ -70,29 +70,29 @@ Pasos para configurar el proyecto en una máquina local:
   - **Ruta**:
    http://localhost:PUERTO/image/fisheye
 
-   *Body*: 
-   -Imagen (usando form-data)
+      *Body*:  
+      -Imagen (usando form-data)  
 
    - **Ruta**:
    http://localhost:PUERTO/image/resize
 
-      Body:
-      -Imagen (usando form-data)
+      Body:  
+      -Imagen (usando form-data)  
       -Width: 
-         Key: width 
-         Value: NUMERO ENTERO (Opcional)
-      -Height: 
-         Key: height 
-         Value: NUMERO ENTERO (Opcional)
+         Key: width  
+         Value: NUMERO ENTERO (Opcional)  
+      -Height:  
+         Key: height  
+         Value: NUMERO ENTERO (Opcional)  
 
    
    - **Ruta**:
    http://localhost:PUERTO/image/rotate
 
-      Body:
-      -Imagen (usando form-data)
-      -Rotate: 
-         Key: rotate 
-         Value: NUMERO ENTERO
+      Body:  
+      -Imagen (usando form-data)  
+      -Rotate:  
+         Key: rotate  
+         Value: NUMERO ENTERO  
    
      
