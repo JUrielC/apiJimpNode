@@ -49,10 +49,10 @@ Pasos para configurar el proyecto en una máquina local:
 
 ## Uso
 
-1. **Configurar variables de entorno de acuerdo al archivo .env.example que está en la carpeta raíz**
-   Cambiar la extensión del archivo .env.example por .env  o crear un nuevo .env con la estructura de env.example en la misma ubicación (carpeta raíz)
+1. **Configurar variables de entorno de acuerdo al archivo .env.example que está en la carpeta raíz**  
+   Cambiar la extensión del archivo .env.example por .env  o crear un nuevo .env con la estructura de env.example en la misma ubicación (carpeta raíz) y darle los valores que se indican en ese archivo (NODE_PORT, HOST, etc)
 
-2. **Ruta para login:**
+2. **Ruta para login:**  
    Es necesario hacer un login para obtener un token que permita usar las demás funciones
    Los usarios predeterminados son 
    {
@@ -66,7 +66,7 @@ Pasos para configurar el proyecto en una máquina local:
    ```bash
    http://localhost:PUERTO/login/
 
-3. **Rutas para uso de Jimp:**
+3. **Rutas para uso de Jimp:**  
 
   - **Ruta**:
    http://localhost:PUERTO/image/fisheye
